@@ -7,7 +7,7 @@ import themeContext from "./contexts/themeContext";
 export default class App extends React.Component {
 
     state = {
-        theme : 'dark'
+        theme : 'light'
     }
    
  render(){
