@@ -1,18 +1,14 @@
 import React from "react";
 
-export default class HoverCounter extends React.Component {
+export default function ClickCounter ({counter, incrementCount}){
   
-
-    render() {
-
-      const { counter, incrementCount } = this.props;
 
         return (
             <div>
                 <h1 onMouseOver={incrementCount}>
-                    Hover {counter} times
+                    Hover  {counter} times
                 </h1>
             </div>
         );
-    }
+    
 }

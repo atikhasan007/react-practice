@@ -1,11 +1,7 @@
 import React from "react";
 
-export default class ClickCounter extends React.Component {
+export default function ClickCounter ({counter, incrementCount}){
   
-
-    render() {
-
-      const { counter, incrementCount } = this.props;
 
         return (
             <div>
@@ -14,5 +10,5 @@ export default class ClickCounter extends React.Component {
                 </button>
             </div>
         );
-    }
+    
 }
