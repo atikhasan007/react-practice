@@ -27,7 +27,7 @@ componentDidMount (){
 
 
  componentDidUpdate(){
-    document.getElementById("div2").innerHTML  = "the update favorite is "+ this.state.favoritecolor;
+    document.getElementById("div2").innerHTML  = "the update favorite is "+ this.state.favoritecolor
  }
 
 
