@@ -3,6 +3,7 @@ import ClickCounter from "./components/ClickCounter";
 import Container from "./components/Container";
 import Counter from "./components/Counter";
 import Header from "./components/Header";
+import MouseTracker from "./components/MouseTracker";
 import Section from "./components/Section";
 import StatePractice from "./components/StatePractice";
 import themeContext from "./contexts/themeContext";
@@ -38,6 +39,7 @@ export default class App extends React.Component {
             <StatePractice />
             <Header favcol = "yellow"/>
             <Container/>
+            <MouseTracker/>
 
 
 
