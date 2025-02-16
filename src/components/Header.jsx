@@ -1,4 +1,4 @@
-//comonentDidMount
+
 
 import React from "react";
 export default class Header extends React.Component {
@@ -12,12 +12,9 @@ constructor (props){
 }
 
 
-static getDerivedStateFromProps (props, state){
-    return {
-        favoritecolor : props.favcol,
-    }
+shouldComponentUpdate (){
+    return true;// true or false ;;true means state is change and false means state is not change 
 }
-
 
 changeColor = () =>{
     this.setState({
