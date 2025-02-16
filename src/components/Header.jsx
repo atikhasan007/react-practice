@@ -12,15 +12,23 @@ constructor (props){
 }
 
 
-shouldComponentUpdate (){
-    return true;// true or false ;;true means state is change and false means state is not change 
+componentDidMount (){
+    setTimeout(()=>{
+        this.setState({
+            favoritecolor : 'yellow'
+        })
+    }, 1000)
 }
 
-changeColor = () =>{
-    this.setState({
-        favoritecolor : "blue",
-    })
-}
+
+ getSnapshotBeforeUpdate(prevProps, prevState){
+    document.getElementById("div1").innerHTML = "Before the update , the favorite was " + prevState.favoritecolor;
+ }
+
+
+ componentDidUpdate(){
+    document.getElementById("div2").innerHTML  = "the update favorite is "+ this.state.favoritecolor;
+ }
 
 
 
@@ -30,6 +38,8 @@ changeColor = () =>{
             <div>
                 <h1>My Favorite Color is {favoritecolor}</h1>
                 <button type="button" onClick={this.changeColor}>CangeColor</button>
+                <div id="div1"></div>
+                <div id="div2"></div>
             </div>
         )
     }
