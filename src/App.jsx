@@ -35,7 +35,7 @@ export default class App extends React.Component {
                 </div>
             </themeContext.Provider>
             <StatePractice />
-            <Header favcol = "yellow"/>
+            <Header />
 
 
 

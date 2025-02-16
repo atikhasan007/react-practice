@@ -12,10 +12,15 @@ constructor (props){
 }
 
 
-static getDerivedStateFromProps(props, state){
-    return {favoritecolor: props.favcol}
-}
 
+
+componentDidMount () {
+    setTimeout(()=>{
+        this.setState({
+            favoritecolor: 'yellow'
+        })
+    }, 3000)
+}
 
 
 
