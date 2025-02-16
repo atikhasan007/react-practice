@@ -1,40 +1,44 @@
 import React from "react";
 import ClickCounter from "./components/ClickCounter";
 import Counter from "./components/Counter";
-import Section from './components/Section';
+import Section from "./components/Section";
+import StatePractice from "./components/StatePractice";
 import themeContext from "./contexts/themeContext";
 
 export default class App extends React.Component {
-
-    state = {
-        theme : 'light'
+    constructor(props) {
+        super(props);
+        this.state = {
+            theme: "light",
+        };
     }
 
- switchTheme = () =>{
-    this.setState((prevState) => {
-        return {
-            theme : prevState.theme === 'dark' ? 'light' : 'dark',
-        }
-    })
- }
-   
- render(){
-  const {theme} = this.state;
+    switchTheme = () => {
+        this.setState((prevState) => ({
+            theme: prevState.theme === "dark" ? "light" : "dark",
+        }));
+    };
 
-    return ( 
-
-
-        
-        <div className="app">
-            <Counter>
-            {(counter, incrementCount) => (
-                    <ClickCounter counter={counter} incrementCount={incrementCount} />
-                )}
-            </Counter>
-
-            <themeContext.Provider value ={{theme , switchTheme:this.switchTheme}}><Section/></themeContext.Provider>
+    render() {
+        return (
+            <>
             
-        </div>
-    );
-   }
- }
+            <themeContext.Provider value={{ ...this.state, switchTheme: this.switchTheme }}>
+                <div className="app">
+                    <Counter>
+                        {(counter, incrementCount) => (
+                            <ClickCounter counter={counter} incrementCount={incrementCount} />
+                        )}
+                    </Counter>
+                    <Section />
+                </div>
+            </themeContext.Provider>
+            <StatePractice />
+
+
+
+            
+            </>
+        );
+    }
+}

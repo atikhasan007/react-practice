@@ -19,6 +19,7 @@ class Context {
 
 
 console.log(typeof(Consumer));
+
 function createContext (value = null){
 
     const context = new Context(value);
