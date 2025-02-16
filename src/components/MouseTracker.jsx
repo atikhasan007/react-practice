@@ -1,5 +1,5 @@
 import React from "react";
-import Mouse from "./Mouse";
+import MouseWithCat from "./MouseWithCat";
 export default class MouseTracker extends React.Component{
  
 
@@ -8,9 +8,7 @@ export default class MouseTracker extends React.Component{
       return (
         <div>
             <h1>Move the mouse around!</h1>
-            <Mouse />
-
-          
+            <MouseWithCat />
           
         </div>
       )
