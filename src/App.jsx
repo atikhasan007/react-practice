@@ -1,6 +1,7 @@
 import React from "react";
 import ClickCounter from "./components/ClickCounter";
 import Counter from "./components/Counter";
+import Header from "./components/Header";
 import Section from "./components/Section";
 import StatePractice from "./components/StatePractice";
 import themeContext from "./contexts/themeContext";
@@ -34,6 +35,7 @@ export default class App extends React.Component {
                 </div>
             </themeContext.Provider>
             <StatePractice />
+            <Header favcol = "yellow"/>
 
 
 
