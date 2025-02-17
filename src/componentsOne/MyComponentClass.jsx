@@ -13,7 +13,8 @@ export default class MyComponentClass extends React.Component{
 //set kore dibe title ke 
     componentDidMount(){
         const {count} = this.state;
-        document.title  = `Clicked ${count} times`
+        document.title  = `Clicked ${count} times`;
+        setInterval(this.tick, 1000);
 
     }
 
@@ -21,8 +22,11 @@ export default class MyComponentClass extends React.Component{
     componentDidUpdate(){
         const {count } = this.state;
         document.title = `Clicked ${count} times`
+        setInterval(this.tick, 1000);
 
     }
+
+
 
 
 
@@ -31,6 +35,18 @@ export default class MyComponentClass extends React.Component{
         count : count + 1
     }))
    }
+
+
+
+
+
+    //and also date 
+    tick = () =>{
+        this.setState({
+            date : new Date(),
+        })
+    }
+
 
     render() {
         const {date,count} = this.state;
