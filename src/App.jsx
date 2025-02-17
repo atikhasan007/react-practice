@@ -1,14 +1,15 @@
 
 
 import React from "react";
-import Counter from "./componentsOne/Counter";
+import MyComponentClass from "./componentsOne/MyComponentClass";
 
 
 export default class App extends React.Component {
     render(){
         return (
             <div>
-            <Counter />
+                <div>We shall learn useEffect() today </div>
+                <MyComponentClass />
             </div>
         )
     }
