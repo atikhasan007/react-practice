@@ -6,8 +6,7 @@ export default class MyComponentClass extends React.Component{
         count : 0, // initialize 0
         date : new Date(), //initialize current date 
     }
-
-
+//side effect 
 //first time load when component is load first time 
 //componentDidMount 1 bar call hoy 
 //set kore dibe title ke 
