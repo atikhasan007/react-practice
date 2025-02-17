@@ -1,14 +1,14 @@
 
 
 import React from "react";
-import Todo from "./componentsOne/Todo";
+import Counter from "./componentsOne/Counter";
 
 
 export default class App extends React.Component {
     render(){
         return (
             <div>
-            <Todo />
+            <Counter />
             </div>
         )
     }
