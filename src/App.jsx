@@ -1,7 +1,7 @@
 
 
 import React from "react";
-import MyComponentClass from "./componentsOne/MyComponentClass";
+import MyComponent from "./componentsOne/MyComponent";
 
 
 export default class App extends React.Component {
@@ -9,7 +9,7 @@ export default class App extends React.Component {
         return (
             <div>
                 <div>We shall learn useEffect() today </div>
-                <MyComponentClass />
+             <MyComponent/>
             </div>
         )
     }
