@@ -7,7 +7,8 @@ function Counter(){
   let i = 0;
   const addFive = () =>{
     while(i<5){
-        setCount(count + 1);
+        //setCount(count + 1);// normaly  count + 1 na diye 
+        setCount((prevState)=> prevState + 1)
         i=i+1;
     }
   }
@@ -17,7 +18,9 @@ function Counter(){
             {count }<p>
             <button type="button" onClick={()=>
                 setCount((prevState)=>
-                    prevState + 1
+                   prevState + 1
+                   
+                  
                     
                 )
             }>Add 1</button>
