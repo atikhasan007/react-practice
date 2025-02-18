@@ -21,6 +21,8 @@ const tick = () =>{
 useEffect(()=>{
   console.log('starting timer')
    const interval = setInterval(tick, 1000);
+
+   //do the cleanup - stop the timer 
    return ()=>{
     console.log('component unmounted');
     clearInterval(interval);
