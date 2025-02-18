@@ -15,12 +15,16 @@ const addClick = () =>{
 
 
 const tick = () =>{
-  console.log('tice function')
+  console.log('tice function running ')
     setDate(new Date());
 }
 useEffect(()=>{
   console.log('starting timer')
-  setInterval(tick, 1000);
+   const interval = setInterval(tick, 1000);
+   return ()=>{
+    console.log('component unmounted');
+    clearInterval(interval);
+   }
 },[])
 
 

@@ -1,7 +1,7 @@
 
 
 import React, { useState } from "react";
-import MyComponentClass from "./componentsOne/MyComponentClass";
+import MyComponent from "./componentsOne/MyComponent";
 
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
 
         return (
             <div className="app">
-                <div>{show && <MyComponentClass/>}</div>
+                <div>{show && <MyComponent/>}</div>
                 <p>
                     <button type="button" onClick={()=>{
                         setShow((prevShow)=>!prevShow)
