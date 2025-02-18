@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 const  MyComponent = () => {
 
     const [count , setCount ] = useState(0);
-    const [text, setText] = useState('');
+    
     const [date, setDate] = useState(new Date());
 
 const addClick = () =>{
@@ -17,12 +17,20 @@ const addClick = () =>{
 const tick = () =>{
     setDate(new Date());
 }
+useEffect(()=>{
+  console.log('starting timer')
+  setInterval(tick, 1000);
+},[])
+
 
 
 useEffect(()=>{
   console.log('useEffect is render ');
     document.title = `Clicked ${count} times`;
-}, [count]);
+}, [count]);//dependency array 
+
+
+
 
   return (
 
@@ -33,11 +41,7 @@ useEffect(()=>{
             <button type='button' onClick={addClick}>Click {count}</button>
         </p>
       
-      <p>
-         <input type='text' value={text} onChange={(e)=>
-            setText(e.target.value)
-         }/>
-      </p>
+     
       
     </div>
   )
