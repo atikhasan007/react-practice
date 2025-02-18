@@ -1,12 +1,12 @@
 
 
 import React from "react";
-import Timer from "./MyPractice/UseEffect/Timer";
+import Counter from "./MyPractice/UseEffect/Counter";
 export default function App() {
 
     return (
      <div>
-        <Timer />
+        <Counter/>
         
      </div>
     )
