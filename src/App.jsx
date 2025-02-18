@@ -1,6 +1,6 @@
 
 
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import Button from "./componentsOne/Button";
 import ShowCount from "./componentsOne/ShowCount";
 import Title from "./componentsOne/Title";
@@ -25,15 +25,17 @@ const incrementByFive =  useCallback(()=>{
 
 
 
-const isEvenOrOdd = () =>{
+const isEvenOrOdd =   useMemo(() =>{
+    let i = 0;
+    while(i < 10000000) i+=1;
     return count1 % 2 === 0;
-}
+},[count1])
 
     return (
        <div className="app">
          <Title />
          <ShowCount count={count1} title='counter 1'/>
-         <span>{isEvenOrOdd() ? 'Even' : 'odd'}</span>
+         <span>{isEvenOrOdd ? 'Even' : 'odd'}</span>
 
          <Button handleClick={incrementByOne}>Increment by one</Button>
          <hr/>
