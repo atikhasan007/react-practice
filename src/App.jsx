@@ -1,16 +1,23 @@
 
 
-import React from "react";
+import React, { useState } from "react";
 import MyComponent from "./componentsOne/MyComponent";
 
 
-export default class App extends React.Component {
-    render(){
+export default function App() {
+      const [show, setShow] = useState(true);
+
         return (
-            <div>
-                <div>We shall learn useEffect() today </div>
-             <MyComponent/>
+            <div className="app">
+                <div>{show && <MyComponent/>}</div>
+                <p>
+                    <button type="button" onClick={()=>{
+                        setShow((prevShow)=>!prevShow)
+                    }}>{show? 'Hide post' : 'show post'}</button>
+                </p>
+                
+             
+
             </div>
         )
     }
-}
