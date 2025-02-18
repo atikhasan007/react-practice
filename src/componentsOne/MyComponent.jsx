@@ -15,6 +15,7 @@ const addClick = () =>{
 
 
 const tick = () =>{
+  console.log('tice function')
     setDate(new Date());
 }
 useEffect(()=>{

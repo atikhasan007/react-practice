@@ -13,18 +13,22 @@ export default class MyComponentClass extends React.Component{
     componentDidMount(){
         const {count} = this.state;
         document.title  = `Clicked ${count} times`;
-        setInterval(this.tick, 1000);
+        this.interval = setInterval(this.tick, 1000);
 
     }
 
     //document title update 
     componentDidUpdate(){
         const {count } = this.state;
-        document.title = `Clicked ${count} times`
-        setInterval(this.tick, 1000);
+        document.title = `Clicked ${count} times`;
+        
 
     }
 
+
+    componentWillUnmount(){
+        clearInterval(this.interval);
+    }
 
 
 
@@ -41,6 +45,7 @@ export default class MyComponentClass extends React.Component{
 
     //and also date 
     tick = () =>{
+        console.log('Clock ticking');
         this.setState({
             date : new Date(),
         })
