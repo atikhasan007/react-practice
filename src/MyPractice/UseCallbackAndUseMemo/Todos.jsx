@@ -20,4 +20,4 @@ import React from 'react';
   )
 }
 
-export default Todos;
+export default React.memo(Todos);
