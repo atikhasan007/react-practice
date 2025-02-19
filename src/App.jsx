@@ -1,13 +1,11 @@
 import React from 'react';
-import Form from './MyPractice/useRefandForwardRef/Form';
-import Time from './componentsOne/Time';
+import Counter from './contexts/Counter';
 
 const  App = () => {
   return (
     <div>
-      <Form/>
-      <Time/>
       
+      <Counter/>
     </div>
   )
 }
