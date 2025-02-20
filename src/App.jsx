@@ -1,12 +1,12 @@
 
 import React from 'react'
-import GetPost2 from './contexts/GetPost2'
+import LayoutComponentOne from './customHooks/LayoutComponentOne'
 
 export default function App() {
   return (
     <div className='App'>
-      <GetPost2/>
-      
+        hello
+        <LayoutComponentOne/>
     </div>
   )
 }
