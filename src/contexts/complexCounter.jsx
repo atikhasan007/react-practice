@@ -51,17 +51,6 @@ const  ComplexCounter = () => {
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
     <div>
         <div>Count - {count.counter}</div>
         <button type='button' onClick={()=>dispatch({
