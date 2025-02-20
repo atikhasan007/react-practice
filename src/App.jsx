@@ -1,11 +1,11 @@
 import React from 'react';
-import ComplexCounter from './contexts/complexCounter';
+import CounterThree from './componentsOne/CounterThree';
 
 const  App = () => {
   return (
     <div>
       
-      <ComplexCounter/>
+      <CounterThree/>
     </div>
   )
 }
